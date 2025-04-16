@@ -5,19 +5,19 @@ readonly VERSION_ROS2="ROS2"
 readonly VERSION_HUMBLE="humble"
 
 pushd `pwd` > /dev/null
-cd `dirname $0`
+cd `dirname $1`
 echo "Working Path: "`pwd`
 
 ROS_VERSION=""
 ROS_HUMBLE=""
 
 # Set working ROS version
-if [ "$1" = "ROS2" ]; then
+if [ "$2" = "ROS2" ]; then
     ROS_VERSION=${VERSION_ROS2}
-elif [ "$1" = "humble" ]; then
+elif [ "$2" = "humble" ]; then
     ROS_VERSION=${VERSION_ROS2}
     ROS_HUMBLE=${VERSION_HUMBLE}
-elif [ "$1" = "ROS1" ]; then
+elif [ "$2" = "ROS1" ]; then
     ROS_VERSION=${VERSION_ROS1}
 else
     echo "Invalid Argument"
