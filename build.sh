@@ -4,7 +4,7 @@ readonly VERSION_ROS1="ROS1"
 readonly VERSION_ROS2="ROS2"
 readonly VERSION_HUMBLE="humble"
 
-cd $(realpath $(dirname $1))
+cd /ws_livox/src/livox_ros_driver2
 pushd `pwd` > /dev/null
 echo "Working Path: $(pwd)"
 
