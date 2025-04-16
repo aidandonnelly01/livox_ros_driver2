@@ -4,8 +4,8 @@ readonly VERSION_ROS1="ROS1"
 readonly VERSION_ROS2="ROS2"
 readonly VERSION_HUMBLE="humble"
 
-pushd `pwd` > /dev/null
 cd `dirname $1`
+pushd `pwd` > /dev/null
 echo "Working Path: "`pwd`
 
 ROS_VERSION=""
