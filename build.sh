@@ -12,12 +12,12 @@ ROS_VERSION=""
 ROS_HUMBLE=""
 
 # Set working ROS version
-if [ "$2" = "ROS2" ]; then
+if [ "$1" = "ROS2" ]; then
     ROS_VERSION=${VERSION_ROS2}
-elif [ "$2" = "humble" ]; then
+elif [ "$1" = "humble" ]; then
     ROS_VERSION=${VERSION_ROS2}
     ROS_HUMBLE=${VERSION_HUMBLE}
-elif [ "$2" = "ROS1" ]; then
+elif [ "$1" = "ROS1" ]; then
     ROS_VERSION=${VERSION_ROS1}
 else
     echo "Invalid Argument"
