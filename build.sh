@@ -8,21 +8,9 @@ pushd `pwd` > /dev/null
 cd /ws_livox/src/livox_ros_driver2
 echo "Working Path: $(pwd)"
 
-ROS_VERSION=""
-ROS_HUMBLE=""
-
 # Set working ROS version
-if [ "$1" = "ROS2" ]; then
-    ROS_VERSION=${VERSION_ROS2}
-elif [ "$1" = "humble" ]; then
-    ROS_VERSION=${VERSION_ROS2}
-    ROS_HUMBLE=${VERSION_HUMBLE}
-elif [ "$1" = "ROS1" ]; then
-    ROS_VERSION=${VERSION_ROS1}
-else
-    echo "Invalid Argument"
-    exit
-fi
+ROS_VERSION=${VERSION_ROS2}
+ROS_HUMBLE=${VERSION_HUMBLE}
 echo "ROS version is: "$ROS_VERSION
 
 # clear `build/` folder.
